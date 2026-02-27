@@ -1,0 +1,90 @@
+:root {
+  --bg-black: #000000;
+  --accent-black: #1a1a1a;
+  --highlight-red: #b91c1c;
+  --text-white: #ffffff;
+  --text-gray: #d1d5db;
+}
+
+body {
+  background: var(--bg-black);
+  color: var(--text-white);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background: var(--accent-black);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-gray);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--highlight-red);
+}
+
+.hero {
+  background: url('/toronto-hero.jpg') no-repeat center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  background: var(--highlight-red);
+  color: var(--text-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--accent-black);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hero { height: 40vh; }
+  nav { flex-direction: column; }
+}
